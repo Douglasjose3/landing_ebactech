@@ -5,6 +5,7 @@
 
     &--frontend {
         background-image: linear-gradient(variables.$blue1, variables.$blue2);
+        text-align: right;
     }
 
     &--ux-ui {
@@ -13,14 +14,22 @@
 
     &--data-science {
         background-image: linear-gradient(variables.$pink, variables.$yellow);
+        text-align: right;
     }
 
     &--backend {
         background-image: linear-gradient(variables.$yellow, variables.$pink);
     }
 
+    &--image-left {
+        .container {
+            flex-direction: row-reverse;
+        }
+    }
+
     .container {
         display: flex;
+        gap: 40px;
     }
 
     &__image {
@@ -28,10 +37,9 @@
     }
 
     &__details {
-        margin-right: 40px;
 
         &__title {
-            font-size: 18px;
+            font-size: 24px;
             font-weight: bold;
             margin-bottom: 16px;
         }
@@ -55,12 +63,24 @@
         }
 
         &__details {
-            margin-right: 0;
             margin-bottom: 16px;
+
+            &__title {
+                padding-top: 24px;
+                margin-bottom: 12px;
+            }
+
+            &__description {    
+                line-height: 24px;
+            }
         }
 
-        &__title {
-            padding-top: 24px;
+        &--frontend {
+            text-align: left;
+        }
+
+        &--data-science {
+            text-align: left;
         }
     }
 }
